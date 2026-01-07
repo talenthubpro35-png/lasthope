@@ -1,0 +1,29 @@
+=== PostgreSQL Setup Steps ===
+
+✅ PostgreSQL 16 is installed and running
+✅ .env file created
+
+NOW DO THIS:
+
+1. CREATE THE DATABASE:
+   Run this command (it will ask for your PostgreSQL password):
+   
+   powershell -Command "$env:Path += ';C:\Program Files\PostgreSQL\16\bin'; psql -U postgres -c 'CREATE DATABASE talenthub;'"
+
+2. UPDATE .env FILE:
+   Open .env file and replace "YOUR_PASSWORD_HERE" with your actual PostgreSQL password.
+   
+   Example: DATABASE_URL=postgresql://postgres:mypassword123@localhost:5432/talenthub
+
+3. PUSH SCHEMA:
+   npm run db:push
+
+4. START SERVER:
+   npm start
+
+You should see: [db] Database connection initialized ✅
+
+Need help? Check QUICK_SETUP.md for details.
+
+
+
